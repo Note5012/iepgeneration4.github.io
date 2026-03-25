@@ -166,7 +166,7 @@ class FloatingParticle {
         const types = ["text", "image"];
         this.type = types[Math.floor(Math.random() * types.length)];
 
-        const texts = ["Love", "You", "♥", "Congratulations"];
+        const texts = ["Goodluck", "You", "♥", "Congratulations"];
         this.text = texts[Math.floor(Math.random() * texts.length)];
 
         // สุ่มรูป
