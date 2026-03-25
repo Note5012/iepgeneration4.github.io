@@ -11,7 +11,9 @@ btn.addEventListener("click", () => {
     }
 });
 
-const CANVAS_WIDTH = 840;
+
+
+const CANVAS_WIDTH = 1000;
 const CANVAS_HEIGHT = 1000;
 const CANVAS_CENTER_X = CANVAS_WIDTH / 2;
 const CANVAS_CENTER_Y = CANVAS_HEIGHT / 2.5;
