@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+canvas {
+    display: block;
+    z-index: 1;
+}
+
+/* 🔥 ตัวหลัก */
+.name {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    width: 200px;
+    height: 50px;
+    transform-style: preserve-3d;
+    animation: rotate3d linear infinite;
+    pointer-events: none;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* 🔥 วงแต่ละวง (ความเร็วต่างกัน) */
+.name1 { animation-duration: 12s; }
+.name2 { animation-duration: 16s; animation-direction: reverse; }
+.name3 { animation-duration: 24s; }
+
+/* 🔥 แกนหมุน */
+@keyframes rotate3d {
+    0% { transform: perspective(1000px) translateX(-50%) rotateX(-10deg) rotateY(0deg); }
+    100% { transform: perspective(1000px) translateX(-50%) rotateX(-10deg) rotateY(360deg); }
+}
+
+/* 🔥 พื้นฐาน span */
+.name span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+/* 🔥 รัศมีแต่ละวง (สำคัญมาก) */
+.name1 span {
+    transform: rotateY(calc(var(--i) * 40deg)) translateZ(120px);
+}
+
+.name2 span {
+    transform: rotateY(calc(var(--i) * 40deg)) translateZ(300px);
+}
+
+.name3 span {
+    transform: rotateY(calc(var(--i) * 40deg)) translateZ(350px);
+}
+
+/* 🔥 ตัวหนังสือ */
+.name span p {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    backface-visibility: visible;
+}
+
+/* 🎨 สีแยกแต่ละวง */
+.name1 p {
+    color: #ff3e5f;
+    text-shadow: 0 0 10px rgba(255, 62, 95, 0.8);
+}
+
+.name2 p {
+    color: #ff7aa2;
+    text-shadow: 0 0 10px rgba(255, 122, 162, 0.8);
+}
+
+.name3 p {
+    color: #ffc1d5;
+    text-shadow: 0 0 10px rgba(255, 193, 213, 0.8);
+}
+
+.bgm-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.bgm-control button {
+    padding: 12px 18px;
+    border: none;
+    background: #ff3e5f;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .bgm-control button {
+        padding: 14px 20px;
+        font-size: 18px;
+    }
+}
