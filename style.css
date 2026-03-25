@@ -11,6 +11,8 @@ body {
 canvas {
     display: block;
     z-index: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 🔥 ตัวหลัก */
