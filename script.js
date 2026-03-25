@@ -250,7 +250,8 @@ function animate() {
 
         context.fillText("Congratulation", CANVAS_CENTER_X, CANVAS_CENTER_Y);
         context.font = "22px Arial";
-        context.fillText("Wishing you all the best for your next chapter! 💖", CANVAS_CENTER_X, CANVAS_CENTER_Y + 50);
+        context.fillText("Wishing you all the best 
+                         for your next chapter! 💖", CANVAS_CENTER_X, CANVAS_CENTER_Y + 50);
 
         context.globalAlpha = 1;
 
