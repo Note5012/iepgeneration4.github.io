@@ -1,20 +1,22 @@
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     background-color: black;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 canvas {
-    display: block;
+    position: fixed;   /* หรือ absolute ก็ได้ */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* กึ่งกลางแนว X/Y */
     z-index: 1;
-    justify-content: center;
-    align-items: center;
-    left: 20px;
-    top: 25px;
 }
 
 /* 🔥 ตัวหลัก */
@@ -28,7 +30,7 @@ canvas {
     animation: rotate3d linear infinite;
     pointer-events: none;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 999;
 }
 
 /* 🔥 วงแต่ละวง (ความเร็วต่างกัน) */
